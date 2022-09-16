@@ -10,6 +10,7 @@ fn main() {
         .expect("failed to create runtime");
 
     let local = LocalSet::new();
+    // Comment this and the program would exit as usual.
     let _guard = local.enter();
 
     let (tx, rx) = oneshot::channel();
